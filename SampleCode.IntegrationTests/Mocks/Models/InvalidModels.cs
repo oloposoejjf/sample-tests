@@ -27,6 +27,16 @@ namespace SampleCode.IntegrationTests.Mocks.Models
             yield return new TestCaseData(
                 new Model
                 {
+                    Id = new Guid("fa83d630-e51e-4fc4-bac3-ea38ed5c0246"),
+                    Content = "something",
+                    Collaborators = null,
+                },
+                "Collaborators are missing, if there are none, provide an empty collection."
+            );
+
+            yield return new TestCaseData(
+                new Model
+                {
                     Id = new Guid("abdcc6da-f88e-4b0b-9fe4-c3acffa3ec87"),
                     Content = null,
                 },

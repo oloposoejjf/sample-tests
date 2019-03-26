@@ -38,6 +38,16 @@ namespace SampleCode.UnitTests.Mocks.Models
             yield return new TestCaseData(
                 new Model
                 {
+                    Id = new Guid("92f5e0ad-a5d0-48b4-8008-2dd807a410cd"),
+                    Content = "something",
+                    Collaborators = null,
+                },
+                new[] { "Collaborators are missing, if there are none, provide an empty collection." }
+            );
+
+            yield return new TestCaseData(
+                new Model
+                {
                     Id = new Guid("4f59bb2b-748a-45e6-8946-6af01854be47"),
                     Content = null,
                 },
